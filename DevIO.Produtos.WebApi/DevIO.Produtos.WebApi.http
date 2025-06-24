@@ -1,0 +1,6 @@
+@DevIO.Produtos.WebApi_HostAddress = http://localhost:5048
+
+GET {{DevIO.Produtos.WebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
