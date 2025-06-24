@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36202.13 d17.14
+VisualStudioVersion = 17.14.36202.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
@@ -18,6 +18,13 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApi", "WebApi", "{64320768-45BD-4242-9691-24F6837F68B8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevIO.Produtos.WebApi", "DevIO.Produtos.WebApi\DevIO.Produtos.WebApi.csproj", "{BF7C50EC-9FE6-468F-B7C1-573AA4213CE6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docker", "Docker", "{BFE709A8-503C-4544-B6C7-17D4ED86D095}"
+	ProjectSection(SolutionItems) = preProject
+		.dockerignore = .dockerignore
+		Docker\docker-compose.yml = Docker\docker-compose.yml
+		Docker\Dockerfile = Docker\Dockerfile
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

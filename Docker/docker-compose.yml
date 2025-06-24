@@ -1,4 +1,5 @@
-﻿version: '3.8'
+﻿# Docker Compose file for a simple ELK stack with a .NET API
+version: '3.8'
 
 services:
   elasticsearch:
@@ -41,3 +42,4 @@ services:
 networks:
   elk:
     driver: bridge
+
