@@ -19,13 +19,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApi", "WebApi", "{643207
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevIO.Produtos.WebApi", "DevIO.Produtos.WebApi\DevIO.Produtos.WebApi.csproj", "{BF7C50EC-9FE6-468F-B7C1-573AA4213CE6}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docker", "Docker", "{BFE709A8-503C-4544-B6C7-17D4ED86D095}"
-	ProjectSection(SolutionItems) = preProject
-		.dockerignore = .dockerignore
-		Docker\docker-compose.yml = Docker\docker-compose.yml
-		Docker\Dockerfile = Docker\Dockerfile
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
