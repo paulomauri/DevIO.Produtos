@@ -28,7 +28,7 @@ services:
   produto-api:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Docker/Dockerfile
     container_name: produto-api
     ports:
       - "5000:80"
