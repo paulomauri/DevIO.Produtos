@@ -15,5 +15,5 @@ EXPOSE 8080
 EXPOSE 8081
 ENTRYPOINT ["dotnet", "DevIO.Produtos.WebApi.dll"]
 
-# rodar o comando abaixo para criar a imagem Docker e iniciar o container
-# docker compose -f Docker/docker-compose.yml up --build
+# rodar o comando abaixo (na raiz da solution) para criar a imagem Docker e iniciar o container
+# docker compose -f DevIO.Produtos.WebApi/Docker/docker-compose.yml up --build
