@@ -13,7 +13,7 @@ EXPOSE 8081
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["De'vIO.Produtos.WebApi/'DevIO.Produtos.WebApi.csproj", "DevIO.Produtos.WebApi/"]
+COPY ["DevIO.Produtos.WebApi/DevIO.Produtos.WebApi.csproj", "DevIO.Produtos.WebApi/"]
 RUN dotnet restore "./DevIO.Produtos.WebApi/DevIO.Produtos.WebApi.csproj"
 COPY . .
 WORKDIR "/src/DevIO.Produtos.WebApi"
