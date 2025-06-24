@@ -18,3 +18,6 @@ COPY --from=build /app/publish .
 EXPOSE 8080
 EXPOSE 8081
 ENTRYPOINT ["dotnet", "DevIO.Produtos.WebApi.dll"]
+
+# Command to build and run the Docker Compose setup
+# docker compose -f Docker/docker-compose.yml up --build
