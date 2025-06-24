@@ -24,7 +24,7 @@
 
   produto-api:
     build:
-      context: ..
+      context: ../..
       dockerfile: Docker/Dockerfile
     container_name: produto-api
     ports:
