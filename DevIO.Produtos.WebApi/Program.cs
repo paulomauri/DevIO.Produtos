@@ -58,7 +58,7 @@ Log.Logger = new LoggerConfiguration()
     .WriteTo.Elasticsearch(new ElasticsearchSinkOptions(new Uri("http://elasticsearch:9200"))
     {
         AutoRegisterTemplate = true,
-        IndexFormat = "produto-api-logs-{0:yyyy.MM.dd}"
+        IndexFormat = "produto-api-logs-" + DateTime.UtcNow.ToString("yyyy.MM.dd")
     })
     .CreateLogger();
 
