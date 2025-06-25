@@ -7,7 +7,13 @@ COPY ["DevIO.Produtos.Domain/DevIO.Produtos.Domain.csproj", "DevIO.Produtos.Doma
 COPY ["DevIO.Produtos.Infrastructure/DevIO.Produtos.Infrastructure.csproj", "DevIO.Produtos.Infrastructure/"]
 COPY ["Application/DevIO.Produtos.Application.csproj", "Application/"]
 RUN dotnet restore "DevIO.Produtos.WebApi/DevIO.Produtos.WebApi.csproj"
-COPY DevIO.Produtos.WebApi/. ./DevIO.Produtos.WebApi/
+
+COPY DevIO.Produtos.WebApi/*.cs* ./DevIO.Produtos.WebApi/
+COPY DevIO.Produtos.WebApi/Controllers ./DevIO.Produtos.WebApi/Controllers
+COPY DevIO.Produtos.WebApi/Properties ./DevIO.Produtos.WebApi/Properties
+COPY DevIO.Produtos.WebApi/appsettings*.json ./DevIO.Produtos.WebApi/
+COPY DevIO.Produtos.WebApi/DevIO.Produtos.WebApi.http ./DevIO.Produtos.WebApi/
+
 COPY DevIO.Produtos.Domain/. ./DevIO.Produtos.Domain/
 COPY DevIO.Produtos.Infrastructure/. ./DevIO.Produtos.Infrastructure/
 COPY Application/. ./Application/
