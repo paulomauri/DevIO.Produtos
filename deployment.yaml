@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: produto-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: produto-api
+  template:
+    metadata:
+      labels:
+        app: produto-api
+    spec:
+      containers:
+      - name: produto-api
+        image: produto-api:latest
+        imagePullPolicy: Never # porque é uma imagem local
+        ports:
+        - containerPort: 80
+        env:
+        - name: ASPNETCORE_ENVIRONMENT
+          value: "Development"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: produto-api-service
+spec:
+  selector:
+    app: produto-api
+  ports:
+    - protocol: TCP
+      port: 5000
+      targetPort: 80
+  type: LoadBalancer
