@@ -1,7 +1,38 @@
-﻿DevIO.Produtos.WebApi/Docker
+﻿# Ignora a pasta de build do Docker e arquivos de infraestrutura
+DevIO.Produtos.WebApi/Docker
 Dockerfile
 docker-compose.yml
 .dockerignore
+
+# Ignora arquivos de Docker em qualquer subpasta
 **/Dockerfile
 **/docker-compose.yml
 **/.dockerignore
+
+# Ignora arquivos e pastas de build do .NET
+**/bin/
+**/obj/
+
+# Ignora arquivos de configuração de IDE
+.vs/
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Ignora arquivos de controle de versão
+.git
+.gitignore
+.gitattributes
+
+# Ignora arquivos temporários e de sistema
+*.swp
+*.tmp
+*.log
+*.DS_Store
+Thumbs.db
+
+# Ignora arquivos de publicação locais
+publish/
