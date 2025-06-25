@@ -5,7 +5,7 @@ using DevIO.Produtos.Infrastructure.Repository;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
 
- var logger = new LoggerConfiguration()
+Log.Logger = new LoggerConfiguration()
     .Enrich.FromLogContext()
     .WriteTo.Elasticsearch(new Serilog.Sinks.Elasticsearch.ElasticsearchSinkOptions(new Uri("http://elasticsearch:9200"))
     {
