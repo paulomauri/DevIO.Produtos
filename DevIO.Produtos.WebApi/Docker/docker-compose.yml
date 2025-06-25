@@ -1,4 +1,6 @@
-﻿services:
+﻿version: "3.8"
+
+services:
   elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch:8.13.0
     container_name: elasticsearch
@@ -24,14 +26,14 @@
 
   produto-api:
     build:
-      context: ../..
+      context: ../..              # ou o caminho correto relativo à pasta do docker-compose.yml
       dockerfile: DevIO.Produtos.WebApi/Docker/Dockerfile
     container_name: produto-api
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
     ports:
       - "5000:80"
       - "5048:80"
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Development
     depends_on:
       - elasticsearch
     networks:
