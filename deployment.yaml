@@ -15,7 +15,7 @@ spec:
       containers:
       - name: produto-api
       - name: produto-api
-        image: seu-usuario/produto-api:1.0 # Substitua pelo nome da sua imagem -- image: produto-api:latest
+        image: paulomauri/produto-api:1.0 # Substitua pelo nome da sua imagem -- image: produto-api:latest
         imagePullPolicy: Always # porque é uma imagem remota -- imagePullPolicy: Never # porque é uma imagem local
         ports:
         - containerPort: 80
