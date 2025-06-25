@@ -27,6 +27,7 @@ COPY --from=build /app/publish .
 
 # Expondo apenas a porta realmente usada (80)
 EXPOSE 80
+EXPOSE 81
 
 # Ponto de entrada da aplicação
 ENTRYPOINT ["dotnet", "DevIO.Produtos.WebApi.dll"]
