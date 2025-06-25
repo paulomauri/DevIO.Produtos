@@ -1,10 +1,17 @@
 ﻿# Etapa de build
+# Etapa de build
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 COPY ["DevIO.Produtos.WebApi/DevIO.Produtos.WebApi.csproj", "DevIO.Produtos.WebApi/"]
+COPY ["DevIO.Produtos.Domain/DevIO.Produtos.Domain.csproj", "DevIO.Produtos.Domain/"]
+COPY ["DevIO.Produtos.Infrastructure/DevIO.Produtos.Infrastructure.csproj", "DevIO.Produtos.Infrastructure/"]
+COPY ["Application/DevIO.Produtos.Application.csproj", "Application/"]
 RUN dotnet restore "DevIO.Produtos.WebApi/DevIO.Produtos.WebApi.csproj"
-COPY . .
-WORKDIR "/src/DevIO.Produtos.WebApi"
+COPY DevIO.Produtos.WebApi/. ./DevIO.Produtos.WebApi/
+COPY DevIO.Produtos.Domain/. ./DevIO.Produtos.Domain/
+COPY DevIO.Produtos.Infrastructure/. ./DevIO.Produtos.Infrastructure/
+COPY Application/. ./Application/
+WORKDIR /src/DevIO.Produtos.WebApi
 RUN dotnet publish "DevIO.Produtos.WebApi.csproj" -c Release -o /app/publish /p:UseAppHost=false
 
 # Etapa final (runtime)
