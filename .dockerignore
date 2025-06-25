@@ -1,5 +1,5 @@
 ﻿# Ignora a pasta de build do Docker e arquivos de infraestrutura
-DevIO.Produtos.WebApi/Docker
+DevIO.Produtos.WebApi/Docker/
 Dockerfile
 docker-compose.yml
 .dockerignore
