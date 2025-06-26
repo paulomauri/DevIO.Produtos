@@ -106,9 +106,9 @@ spec:
     spec:
       containers:
       - name: produto-api
-        image: paulomauri/produto-api:1.0
+        image: devio/produto-api:latest
         ports:
-        - containerPort: 5000
+        - containerPort: 80
         env:
         - name: ASPNETCORE_ENVIRONMENT
           value: "Development"
@@ -123,6 +123,11 @@ spec:
   selector:
     app: produto-api
   ports:
-  - port: 8080
-    targetPort: 8080
+  - port: 80
+    targetPort: 80
     nodePort: 32042
+
+
+# Faz o port-forwarding para acessar os serviços localmente silently
+# kubectl port-forward -n elk svc/kibana 5601:5601 &
+# kubectl port-forward svc/produto-api-service 8080:80 & 
