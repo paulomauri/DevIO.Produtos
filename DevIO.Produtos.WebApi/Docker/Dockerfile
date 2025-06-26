@@ -26,8 +26,9 @@ WORKDIR /app
 COPY --from=build /app/publish .
 
 # Expondo apenas a porta realmente usada (80)
-EXPOSE 80
-EXPOSE 81
+EXPOSE 8080
+EXPOSE 8181
+EXPOSE 5000
 
 # Ponto de entrada da aplicação
 ENTRYPOINT ["dotnet", "DevIO.Produtos.WebApi.dll"]
