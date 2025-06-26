@@ -106,7 +106,7 @@ spec:
     spec:
       containers:
       - name: produto-api
-        image: devio/produto-api:latest
+        image: paulomauri/produto-api:1.0
         ports:
         - containerPort: 80
         env:
