@@ -1,3 +1,4 @@
+# 3. Kibana Deployment + Service
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -21,7 +22,6 @@ spec:
         env:
         - name: ELASTICSEARCH_HOSTS
           value: "http://elasticsearch:9200"
-
 ---
 apiVersion: v1
 kind: Service

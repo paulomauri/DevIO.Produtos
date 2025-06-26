@@ -1,3 +1,4 @@
+# 1. Namespace para ELK
 apiVersion: v1
 kind: Namespace
 metadata:

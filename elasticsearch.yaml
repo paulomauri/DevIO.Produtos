@@ -1,3 +1,4 @@
+# 2. Elasticsearch Deployment + Service
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -23,7 +24,6 @@ spec:
           value: "single-node"
         - name: xpack.security.enabled
           value: "false"
-
 ---
 apiVersion: v1
 kind: Service
